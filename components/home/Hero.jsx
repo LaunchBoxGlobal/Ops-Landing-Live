@@ -23,13 +23,6 @@ const Hero = () => {
           <span className="red-text">Work.</span>
         </h2>
 
-        <p className="text-xl lg:text-2xl font-extralight text-gray-400 text-center lg:max-w-[85%]">
-          Whether you need a single dashboard that pulls together your existing
-          tools, or a fully custom platform built from the ground up, we build
-          the web and mobile software that fits how your business actually runs,
-          not the other way around.
-        </p>
-
         <div className="flex items-center justify-center gap-3 lg:gap-5 w-full">
           <Link
             href="/contact-us"
@@ -47,14 +40,23 @@ const Hero = () => {
             See How It Works
           </Link>
         </div>
+      </section>
+
+      <HeroAnimation />
+
+      <section className="w-full flex flex-col items-center justify-center text-center gap-5 pt-10">
+        <p className="text-xl lg:text-2xl font-extralight text-gray-400 text-center lg:max-w-[85%]">
+          Whether you need a single dashboard that pulls together your existing
+          tools, or a fully custom platform built from the ground up, we build
+          the web and mobile software that fits how your business actually runs,
+          not the other way around.
+        </p>
 
         <p className="text-xl lg:text-2xl font-medium text-gray-900 text-center max-w-[476px] mx-auto">
           No commitment. Just a clear picture of what's possible for your{" "}
           <span className="red-text">business.</span>
         </p>
       </section>
-
-      <HeroAnimation />
     </section>
   );
 };

@@ -186,9 +186,9 @@ const WhoWeWorkWith = () => {
 
       <div className="w-full flex flex-col items-center gap-7 mt-8">
         <p className="text-[24px] font-normal leading-[1.4] text-center mx-auto max-w-[841px]">
-          Not sure if this applies to your business? Book a free Workflow Audit.
-          If we're not the right fit, we'll tell you honestly and point you in
-          the right direction.
+          Not sure if this applies to your business? Book a Workflow Audit. If
+          we're not the right fit, we'll tell you honestly and point you in the
+          right direction.
         </p>
 
         <Link

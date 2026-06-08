@@ -32,7 +32,11 @@ export function Footer() {
           </p>
           {/* social icons */}
           <div className="flex space-x-3">
-            <Link href={"/"} className="">
+            <Link
+              href={"https://www.facebook.com/LaunchboxGlobal"}
+              target="_blank"
+              className=""
+            >
               <Image
                 src={"/facebook-icon.png"}
                 alt="facebook-icon"
@@ -40,7 +44,11 @@ export function Footer() {
                 height={37}
               />
             </Link>
-            <Link href={"/"} className="">
+            <Link
+              href={"https://www.linkedin.com/company/launchboxglobal/"}
+              target="_blank"
+              className=""
+            >
               <Image
                 src={"/linkedin-icon.png"}
                 alt="linkedin-icon"
@@ -48,7 +56,11 @@ export function Footer() {
                 height={37}
               />
             </Link>
-            <Link href={"/"} className="">
+            <Link
+              href={"https://www.instagram.com/launchboxglobal/"}
+              target="_blank"
+              className=""
+            >
               <Image
                 src={"/instagram-icon.png"}
                 alt="instagram-icon"
@@ -56,7 +68,11 @@ export function Footer() {
                 height={37}
               />
             </Link>
-            <Link href={"/"} className="">
+            <Link
+              href={"https://x.com/launchboxglobal/"}
+              target="_blank"
+              className=""
+            >
               <Image
                 src={"/twitter-icon.png"}
                 alt="twitter-icon"
@@ -200,7 +216,7 @@ export function Footer() {
                 className="rounded-[12px]"
               />
               <p className="text-white text-[15px] leading-snug">
-                Suite # 301, Emarah Suites, Sharah-e-Faisal Karachi
+                1621 Central Ave, Office 8945 Cheyenne, WY 82001
               </p>
             </div>
           </div>
@@ -209,7 +225,13 @@ export function Footer() {
 
       {/* Bottom Section */}
       <div className="mt-20 pt-8 border-t border-zinc-600 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[15px] text-zinc-300">
-        <p>© 2026 LaunchBox Global. All Rights Reserved.</p>
+        <p>
+          © 2026{" "}
+          <Link href={"https://launchboxglobal.com"} target="_blank">
+            LaunchBox Global.
+          </Link>{" "}
+          All Rights Reserved.
+        </p>
         <div className="flex space-x-8">
           <Link
             href="https://launchboxglobal.com/privacy-policy"

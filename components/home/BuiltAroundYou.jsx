@@ -42,8 +42,8 @@ const BuiltAroundYou = () => {
             </p>
 
             <Image
-              src={"/calendar-image.png"}
-              alt="calendar-image"
+              src={"/home/scheduling-and-dispatch-calendar.png"}
+              alt="scheduling-and-dispatch-calendar"
               width={646}
               height={403}
               className="w-full object-contain mt-5 relative z-10"
@@ -60,15 +60,15 @@ const BuiltAroundYou = () => {
                 or spreadsheets.
               </p>
               <Image
-                src={"/customer-management-listing.png"}
-                alt="customer-management-listing"
+                src={"/home/customer-management-list.png"}
+                alt="customer-management-list"
                 width={454}
                 height={170}
                 className="w-full object-contain mt-2"
               />
             </div>
 
-            <div className="w-full flex items-center justify-between gap-3 mt-4">
+            <div className="w-full flex items-center justify-between flex-col md:flex-row gap-3 mt-4">
               <div className="w-full lg:w-[58%] min-h-[255px] lg:h-[279px] flex flex-col items-start justify-center border border-[#EAEAEA] relative rounded-[24px] p-4 md:p-6 overflow-hidden">
                 <h3 className="font-medium text-[18px] leading-none">
                   Payments & Invoicing
@@ -82,13 +82,18 @@ const BuiltAroundYou = () => {
                 <p className="text-xs text-[#00BC7D] mt-2">+12% this week</p>
               </div>
               <div className="w-full lg:w-[39%] flex justify-end">
-                <Image
-                  src={"/operations-dashboard.png"}
-                  alt="operations-dashboard"
-                  width={192}
-                  height={279}
-                  className="w-full object-contain h-[279px] max-h-[279px]"
-                />
+                <div className="w-[192] h-[270px] rounded-[24px] border border-[#EAEAEA] flex flex-col items-center justify-between pb-10 bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] px-4">
+                  <p className="text-lg font-semibold leading-[1.2] mt-10 px-5">
+                    Operations Dashboard
+                  </p>
+                  <Image
+                    src="/home/bars-container.png"
+                    alt="bars-container"
+                    loading="lazy"
+                    width={142}
+                    height={122}
+                  />
+                </div>
               </div>
             </div>
           </div>
