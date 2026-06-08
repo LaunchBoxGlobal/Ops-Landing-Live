@@ -1,0 +1,14 @@
+.slider-dot {
+  left: 0;
+  animation: slideDot 6s ease-in-out infinite alternate;
+}
+
+@keyframes slideDot {
+  from {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  to {
+    transform: translateY(-50%) translateX(156px);
+  }
+}

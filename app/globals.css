@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Outfit", sans-serif;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#fff];
+  font-family: var(--font-outfit), serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.red-text {
+  @apply text-[#F40E00];
+}
+
+.red-bg {
+  @apply bg-[#F40E00];
+}
+
+.padding-x {
+  @apply px-6 md:px-8 midlg:px-[10%]  2xl:px-[13%];
+}
+
+.red-btn {
+  @apply red-bg text-white rounded-[14px] w-auto px-5 lg:px-0 lg:w-[249px] h-[64px] flex items-center justify-center gap-2 text-sm md:text-lg font-semibold hover:text-white hover:bg-black transition-all duration-300;
+}
+
+.white-btn {
+  @apply bg-white custom-shadow text-black hover:bg-[#F40E00] hover:text-white transition-all duration-300 rounded-[14px] w-auto px-5 lg:px-0 lg:w-[205px] h-[64px] flex items-center justify-center gap-2 text-sm md:text-lg font-semibold;
+}
+
+.black-btn {
+  @apply bg-[#000] text-white px-5 lg:px-10 py-6 2xl:py-8 font-bold rounded-xl flex items-center justify-center gap-2 text-sm lg:text-[22px] 2xl:text-[25px] hover:bg-[#e0443c] transition-all duration-300;
+}
+
+.custom-shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f40e00;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f40e00;
+}

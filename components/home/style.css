@@ -1,0 +1,15 @@
+.business-card:hover {
+  background:
+    linear-gradient(135deg, #ffffff, #efc8c8),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fff7f6 16.67%,
+      #ffffff 33.33%,
+      #ffffff 50%,
+      #ffffff 66.67%,
+      #ffffff 83.33%,
+      #ffffff 100%
+    ) !important;
+  transition: all 0.3;
+}

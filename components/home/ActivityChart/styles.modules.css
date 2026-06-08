@@ -1,0 +1,33 @@
+/* .custom-shadow {
+  box-shadow:
+    0px 30px 60px rgba(15, 23, 42, 0.08),
+    0px 10px 20px rgba(15, 23, 42, 0.05);
+} */
+
+.activity-bar {
+  transform-origin: bottom center;
+  will-change: transform;
+  animation: activityPulse 5.5s ease-in-out infinite;
+}
+
+@keyframes activityPulse {
+  0% {
+    transform: translateY(7.5px) scaleY(0.45);
+  }
+
+  25% {
+    transform: translateY(7.5px) scaleY(1);
+  }
+
+  50% {
+    transform: translateY(7.5px) scaleY(0.7);
+  }
+
+  75% {
+    transform: translateY(7.5px) scaleY(0.9);
+  }
+
+  100% {
+    transform: translateY(7.5px) scaleY(0.45);
+  }
+}
