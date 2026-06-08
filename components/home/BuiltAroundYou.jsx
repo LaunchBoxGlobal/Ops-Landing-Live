@@ -3,6 +3,24 @@ import Link from "next/link";
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 
+const customer_management = [
+  {
+    icon: "/home/blueline-services-icon.png",
+    title: "BlueLine Services Co.",
+    description: "$48,200 LTV - 8 jobs",
+  },
+  {
+    icon: "/home/summit-field-works.png",
+    title: "Summit Field Works",
+    description: "$12,800 LTV · 3 jobs",
+  },
+  {
+    icon: "/home/crestview.png",
+    title: "Crestview Technical Group",
+    description: "$94,500 LTV · 21 jobs",
+  },
+];
+
 const BuiltAroundYou = () => {
   return (
     <section className="bg-[#fff] padding-x py-24 selection:bg-red-100 selection:text-red-900 overflow-hidden">
@@ -59,17 +77,38 @@ const BuiltAroundYou = () => {
                 communications, and documents, without digging through inboxes
                 or spreadsheets.
               </p>
-              <Image
-                src={"/home/customer-management-list.png"}
-                alt="customer-management-list"
-                width={454}
-                height={170}
-                className="w-full object-contain mt-2"
-              />
+              <div className="w-full mt-6 space-y-2">
+                {customer_management?.map((c, i) => {
+                  return (
+                    <div
+                      className="w-full border-2 border-[#EAEAEA] rounded-[10px] bg-[#FAFAFA] py-2 px-3 flex items-center justify-between gap-3 hover:border-[#F40E0066] hover:bg-[#ef0400]/10 transition-all duration-300"
+                      key={i}
+                    >
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={c?.icon}
+                          alt={`${c?.title} icon`}
+                          width={28}
+                          height={28}
+                          loading="lazy"
+                        />
+                        <p className="text-xs lg:text-base font-medium leading-none">
+                          {c?.title}
+                        </p>
+                      </div>
+                      <div className="">
+                        <p className="text-[#737373] text-xs md:text-sm leading-none">
+                          {c?.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="w-full flex items-center justify-between flex-col md:flex-row gap-3 mt-4">
-              <div className="w-full lg:w-[58%] min-h-[255px] lg:h-[279px] flex flex-col items-start justify-center border border-[#EAEAEA] relative rounded-[24px] p-4 md:p-6 overflow-hidden">
+              <div className="w-full lg:w-[58%] min-h-[255px] lg:h-[279px] flex flex-col items-start justify-center border border-[#EAEAEA] relative rounded-[24px] p-4 md:p-6 overflow-hidden bg-white hover:bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] transition-all duration-500">
                 <h3 className="font-medium text-[18px] leading-none">
                   Payments & Invoicing
                 </h3>
@@ -102,7 +141,7 @@ const BuiltAroundYou = () => {
         <div className="w-full flex flex-col lg:flex-row gap-4 mt-4">
           {/* card 1 */}
           <div className="w-full lg:w-[350px]">
-            <div className="w-full flex flex-col items-start justify-center border border-[#EAEAEA] relative rounded-[24px] p-4 md:p-6 overflow-hidden">
+            <div className="w-full flex flex-col items-start justify-center border border-[#EAEAEA] bg-white hover:bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] transition-all duration-500 relative rounded-[24px] p-4 md:p-6 overflow-hidden">
               <h3 className="font-medium text-[17px] leading-none">
                 Staff & Field Workflows
               </h3>
@@ -122,7 +161,7 @@ const BuiltAroundYou = () => {
           <div className="w-full">
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* card 2 */}
-              <div className="w-full flex flex-col items-start justify-start border border-[#EAEAEA] relative rounded-[24px] p-4 md:p-6 overflow-hidden">
+              <div className="w-full flex flex-col items-start justify-start border border-[#EAEAEA] bg-white hover:bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] transition-all duration-500 relative rounded-[24px] p-4 md:p-6 overflow-hidden">
                 <h3 className="font-medium text-[18px] leading-none">
                   Integrations & Unified Dashboards
                 </h3>
@@ -135,7 +174,7 @@ const BuiltAroundYou = () => {
                   {["QuickBooks", "HubSpot", "Stripe", "Slack"].map((t, i) => {
                     return (
                       <div
-                        className="bg-[#FAFAFA] hover:bg-red-50 hover:border-[#fe0400]/30 border-2 border-[#EAEAEA] w-full py-3 rounded-[10px] text-[10px] flex justify-center items-center transition-all duration-300"
+                        className="bg-[#FAFAFA] hover:bg-red-50 hover:border-[#fe0400]/30 border-2 border-[#EAEAEA] bg-white hover:bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] transition-all duration-500 w-full py-3 rounded-[10px] text-[10px] flex justify-center items-center transition-all duration-300"
                         key={i}
                       >
                         {t}
@@ -145,7 +184,7 @@ const BuiltAroundYou = () => {
                 </div>
               </div>
               {/* card 3 */}
-              <div className="w-full flex flex-col items-start justify-start border border-[#EAEAEA] relative rounded-[24px] p-4 md:p-6 overflow-hidden">
+              <div className="w-full flex flex-col items-start justify-start border border-[#EAEAEA] bg-white hover:bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] transition-all duration-500 relative rounded-[24px] p-4 md:p-6 overflow-hidden">
                 <h3 className="font-medium text-[18px] leading-none">
                   Custom Workflows
                 </h3>
