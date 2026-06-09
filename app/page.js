@@ -32,7 +32,7 @@ export default function Home() {
       <main className={`bg-transparent relative`}>
         <Hero openModal={openModal} />
         <TrustedByOperators />
-        <BusinessProblems />
+        <BusinessProblems openModal={openModal} />
         <WhatWeDo openModal={openModal} />
         <BuiltAroundYou openModal={openModal} />
         <WhoWeWorkWith openModal={openModal} />

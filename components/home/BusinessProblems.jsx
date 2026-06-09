@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProblemCard from "./ProblemCard";
 
 const problems = [
@@ -12,7 +13,49 @@ const problems = [
   "There’s no single place to see how your business is actually performing. You’re pulling numbers from three tools just to answer a basic question.",
 ];
 
-const BusinessProblems = () => {
+const BusinessProblems = ({ openModal }) => {
+  const [selected, setSelected] = useState([]);
+
+  const toggleProblem = (index) => {
+    setSelected((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
+    );
+  };
+
+  const totalProblems = problems.length;
+  const selectedCount = selected.length;
+  const score = Math.round((selectedCount / totalProblems) * 100);
+
+  const isQualified = score >= 70;
+
+  const getHelperText = () => {
+    if (selectedCount === 0) {
+      return (
+        <p className="text-sm md:text-base italic text-black">
+          If two or more of these sound like your business,{" "}
+          <span className="text-[#FF1E0D] font-semibold">
+            you're exactly who we built this for.
+          </span>{" "}
+          Select the challenges that sound familiar to you.
+        </p>
+      );
+    }
+
+    if (selectedCount >= 1) {
+      return (
+        <p className="text-sm md:text-base italic text-black">
+          Keep going! Select all that apply.
+        </p>
+      );
+    }
+
+    return (
+      <p className="text-sm md:text-base italic text-black">
+        Select the challenges that sound familiar to you.
+      </p>
+    );
+  };
+
   return (
     <section
       aria-labelledby="business-growth-heading"
@@ -49,16 +92,68 @@ const BusinessProblems = () => {
                 key={index}
                 description={problem}
                 highlighted={index === 0}
+                selected={selected.includes(index)}
+                onClick={() => toggleProblem(index)}
               />
             ))}
           </div>
 
-          <p className="mt-6 text-sm md:text-base italic text-black">
-            If two or more of these sound like your business,{" "}
-            <span className="text-[#FF1E0D] font-semibold">
-              you're exactly who we built this for.
-            </span>
-          </p>
+          <div className="w-full bg-red-50 rounded-xl p-5 mt-5">
+            {!isQualified ? (
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                {getHelperText()}
+
+                {selectedCount > 0 && (
+                  <div className="flex items-center gap-3">
+                    <div className="w-[180px] h-2 bg-red-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-[#F40E00]"
+                        style={{ width: `${score}%` }}
+                      />
+                    </div>
+
+                    <span className="font-semibold text-[#F40E00]">
+                      {score}%
+                    </span>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
+                <div className="flex items-start lg:items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center shrink-0">
+                    ✓
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-lg text-black">
+                      You have identified {selectedCount} key challenges.
+                    </h3>
+
+                    <p className="text-[#666]">
+                      You're likely losing time and money to disconnected
+                      systems.
+                    </p>
+
+                    {/* <div className="w-full max-w-[300px] h-2 bg-green-100 rounded-full mt-3 overflow-hidden">
+                      <div
+                        className="h-full bg-green-500"
+                        style={{ width: `${score}%` }}
+                      />
+                    </div> */}
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={openModal}
+                  className="bg-[#F40E00] hover:bg-[#000] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                >
+                  Book a Workflow Audit
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

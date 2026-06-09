@@ -11,7 +11,7 @@ const Hero = ({ openModal }) => {
       <section className="w-full padding-x relative pt-36 xl:pt-44 flex flex-col items-center justify-start gap-5 lg:gap-[25px]">
         <h1
           id="hero-heading"
-          className="font-bold relative z-10 text-[8vw] md:text-[6.2vw] mb-1 text-center tracking-normal leading-none lg:leading-[100px] w-full"
+          className="font-bold relative z-10 text-[8vw] md:text-[6.2vw] mb-1 text-center tracking-normal leading-none lg:leading-[1.2] w-full"
         >
           We Build Software <br className="hidden lg:block" />
           <span className="red-text">Around How You Work</span>

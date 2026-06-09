@@ -174,7 +174,7 @@ const BuiltAroundYou = ({ openModal }) => {
                   {["QuickBooks", "HubSpot", "Stripe", "Slack"].map((t, i) => {
                     return (
                       <div
-                        className="bg-[#FAFAFA] hover:bg-red-50 hover:border-[#fe0400]/30 border-2 border-[#EAEAEA] bg-white hover:bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] transition-all duration-500 w-full py-3 rounded-[10px] text-[10px] flex justify-center items-center transition-all duration-300"
+                        className="bg-[#FAFAFA] hover:bg-red-50 hover:border-[#fe0400]/30 border-2 border-[#EAEAEA] hover:bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] transition-all duration-500 w-full py-3 rounded-[10px] text-[10px] flex justify-center items-center"
                         key={i}
                       >
                         {t}
