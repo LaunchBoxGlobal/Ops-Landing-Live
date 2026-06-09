@@ -92,13 +92,12 @@ const Navbar = ({ openModal }) => {
       </ul>
 
       <div className="hidden w-auto lglg:inline-flex items-center justify-end gap-1 bg-[#fff] pr-1 pl-2 rounded-[17px] border border-[#CECEEA] h-[57px] 2xl:h-[62px] py-1">
-        <button
-          type="button"
-          onClick={openModal}
+        <Link
+          href={"/get-in-touch"}
           className="bg-white px-3 h-full rounded-[11px] whitespace-nowrap text-black transition-all duration-300 flex items-center justify-center font-medium"
         >
           Get in Touch
-        </button>
+        </Link>
         <button
           type="button"
           onClick={openModal}
