@@ -39,8 +39,8 @@ export async function POST(request) {
           service: "object",
           method: "execute_kw",
           args: [
-            "launch-box", // DB Name
-            2, // User ID
+            "launch-box",
+            2,
             ODOO_API_KEY,
             "crm.lead",
             "create",
