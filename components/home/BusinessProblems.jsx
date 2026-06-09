@@ -66,7 +66,7 @@ const BusinessProblems = ({ openModal }) => {
           <div>
             <h2
               id="business-growth-heading"
-              className="font-bold text-black lg:leading-[1] tracking-[-0.03em]
+              className="font-bold text-black leading-[1] tracking-[-0.03em]
               text-[42px]
               md:text-[58px]
               lg:text-[72px]"

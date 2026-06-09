@@ -45,7 +45,7 @@ const Hero = ({ openModal }) => {
 
       <HeroAnimation />
 
-      <section className="w-full flex flex-col items-center justify-center text-center gap-5 pt-10">
+      <section className="w-full padding-x flex flex-col items-center justify-center text-center gap-5 pt-10">
         <p className="text-xl lg:text-2xl font-extralight text-gray-400 text-center lg:max-w-[85%]">
           Whether you need a single dashboard that pulls together your existing
           tools, or a fully custom platform built from the ground up, we build

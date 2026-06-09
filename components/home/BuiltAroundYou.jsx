@@ -29,7 +29,7 @@ const BuiltAroundYou = ({ openModal }) => {
         <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">
           Built Around You
         </p>
-        <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight lg:leading-[1]">
+        <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight leading-[1]">
           Every Business Is Different. <br className="hidden lg:block" /> Your
           Platform Should Be
           <span className="text-[#ea2b2b]">Too</span>
@@ -121,7 +121,7 @@ const BuiltAroundYou = ({ openModal }) => {
                 <p className="text-xs text-[#00BC7D] mt-2">+12% this week</p>
               </div>
               <div className="w-full lg:w-[39%] flex justify-end">
-                <div className="w-[192] h-[270px] rounded-[24px] border border-[#EAEAEA] flex flex-col items-center justify-between pb-10 bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] px-4">
+                <div className="w-full lg:max-w-[192] h-[270px] rounded-[24px] border border-[#EAEAEA] flex flex-col items-center justify-between pb-10 bg-[linear-gradient(135deg,_#F40E0026_0%,_#FFFFFF00_100%)] px-4">
                   <p className="text-lg font-semibold leading-[1.2] mt-10 px-5">
                     Operations Dashboard
                   </p>
