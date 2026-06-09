@@ -12,8 +12,7 @@ export default function WhatWeDo({ openModal }) {
         </p>
         <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight lg:leading-[1]">
           We Build the Software That <br className="hidden lg:block" /> Runs
-          Your Business.
-          <span className="text-[#ea2b2b]">Your Way.</span>
+          Your Business. <span className="text-[#ea2b2b]">Your Way</span>
         </h2>
 
         <p className="text-gray-400 font-light leading-[1.2] text-lg md:text-xl xl:text-2xl max-w-[85%] mx-auto mt-5">

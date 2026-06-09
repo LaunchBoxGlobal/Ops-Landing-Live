@@ -71,9 +71,8 @@ const BusinessProblems = ({ openModal }) => {
               md:text-[58px]
               lg:text-[72px]"
             >
-              Your Business Is Growing.
-              <br />
-              Your Systems <span className="text-[#FF1E0D]">Are Not.</span>
+              Your Business Is Growing. Your Systems{" "}
+              <span className="text-[#FF1E0D]">Are Not</span>
             </h2>
           </div>
 

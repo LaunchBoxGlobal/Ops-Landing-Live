@@ -116,8 +116,7 @@ const WhoWeWorkWith = ({ openModal }) => {
         </p>
         <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight lg:leading-[1]">
           Built for Service Businesses <br className="hidden lg:block" /> That
-          Are Serious About
-          <span className="text-[#ea2b2b]">Growth</span>
+          Are Serious About <span className="text-[#ea2b2b]">Growth</span>
         </h2>
 
         <p className="text-gray-400 font-light leading-[1.2] text-lg md:text-xl xl:text-2xl md:max-w-[75%] mx-auto mt-5">

@@ -13,7 +13,7 @@ export default function TrustedByOperators() {
           <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tighter lg:leading-[1]">
             Five Years. Hundreds Of Operators.
             <br className="hidden lg:block" />
-            One Platform <span className="text-[#ea2b2b]">Philosophy.</span>
+            One Platform <span className="text-[#ea2b2b]">Philosophy</span>
           </h2>
         </div>
 

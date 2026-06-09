@@ -32,7 +32,7 @@ const BuiltAroundYou = ({ openModal }) => {
         <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight lg:leading-[1]">
           Every Business Is Different. <br className="hidden lg:block" /> Your
           Platform Should Be
-          <span className="text-[#ea2b2b]">Too.</span>
+          <span className="text-[#ea2b2b]">Too</span>
         </h2>
 
         <p className="text-gray-400 font-light leading-[1.2] text-lg md:text-xl xl:text-2xl md:max-w-[55%] mx-auto mt-5">

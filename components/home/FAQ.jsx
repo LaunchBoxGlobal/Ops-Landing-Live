@@ -23,7 +23,7 @@ export default function FAQ() {
           className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight lg:leading-[1]"
         >
           Things People Usually Ask <br className="hidden lg:block" /> Before{" "}
-          <span className="text-[#ea2b2b]">Getting</span> Started.
+          <span className="text-[#ea2b2b]">Getting</span> Started
         </h2>
       </div>
 
