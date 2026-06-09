@@ -6,14 +6,8 @@ const ProblemCard = ({ description, selected, onClick }) => {
   return (
     <article
       onClick={onClick}
-      className={`relative overflow-hidden rounded-[24px] border bg-white p-6 min-h-[180px] transition-all duration-300 cursor-pointer group ${selected ? "border-[#F40E00] bg-red-50" : "border-[#ECECEC] hover:border-[#F40E004D] hover:bg-red-50/30"}`}
+      className={`relative overflow-hidden rounded-[24px] border p-6 min-h-[180px] transition-all duration-300 cursor-pointer group ${selected ? "border-[#F40E00] bg-[#f40e00]/10" : "border-[#ECECEC] hover:border-[#F40E004D] bg-white hover:bg-red-50/80"}`}
     >
-      {/* checkmark */}
-      {/* {selected && (
-        <div className="absolute top-4 right-4 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-white text-xs">
-          ✓
-        </div>
-      )} */}
       {/* Default image */}
       <Image
         src="/problem-card-image.svg"
@@ -21,7 +15,7 @@ const ProblemCard = ({ description, selected, onClick }) => {
         width={133}
         height={159}
         loading="lazy"
-        className="absolute right-0 inset-y-0 h-full w-auto opacity-25 z-0 transition-opacity duration-300 group-hover:opacity-0"
+        className={`absolute right-0 inset-y-0 h-full w-auto ${selected ? "opacity-0" : "opacity-25 group-hover:opacity-0 z-0 transition-opacity"} duration-300`}
       />
 
       {/* Hover image */}
@@ -30,7 +24,7 @@ const ProblemCard = ({ description, selected, onClick }) => {
         alt=""
         width={133}
         height={159}
-        className="absolute right-0 inset-y-0 h-full w-auto opacity-0 z-0 transition-opacity duration-300 group-hover:opacity-25"
+        className={`absolute right-0 inset-y-0 h-full w-auto ${selected ? "opacity-100" : "opacity-0 z-0 transition-opacity group-hover:opacity-25"} duration-300`}
       />
 
       <div
