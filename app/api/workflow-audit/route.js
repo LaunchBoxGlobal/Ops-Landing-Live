@@ -54,7 +54,7 @@ export async function POST(request) {
                 user_id: null,
                 source_id: 19,
                 campeign_id: 21,
-                name: `${(body?.firstName || "") + " " + (body?.lastName || "")} - Workflow Audit`,
+                name: `${(body?.firstName || "") + " " + (body?.lastName || "")} - Operations Form`,
                 email_from: body?.email || "",
                 phone: body?.phoneNumber || "",
                 partner_name: body?.companyName || "",
