@@ -1,0 +1,15 @@
+.react-international-phone-input:focus {
+  box-shadow: none !important;
+}
+
+.react-international-phone-input-container:focus-within {
+  /* box-shadow: 0 0 0 1px #f40e00 !important; */
+  border-radius: 8px;
+}
+
+.react-international-phone-input-container:focus-within
+  .react-international-phone-input,
+.react-international-phone-input-container:focus-within
+  .react-international-phone-country-selector-button {
+  border-color: #f71c11 !important;
+}

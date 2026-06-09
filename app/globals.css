@@ -19,6 +19,7 @@ body {
   font-family: var(--font-outfit), serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 .red-text {

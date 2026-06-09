@@ -21,7 +21,7 @@ const customer_management = [
   },
 ];
 
-const BuiltAroundYou = () => {
+const BuiltAroundYou = ({ openModal }) => {
   return (
     <section className="bg-[#fff] padding-x py-24 selection:bg-red-100 selection:text-red-900 overflow-hidden">
       {/* Header Section */}
@@ -205,12 +205,13 @@ const BuiltAroundYou = () => {
                 </p>
               </div>
               <div className="w-full max-w-[280px]">
-                <Link
-                  href={"/contact-us"}
+                <button
+                  type="button"
+                  onClick={openModal}
                   className="bg-white hover:bg-black hover:text-white transition-all duration-300 red-text rounded-[14px] flex items-center justify-center gap-2 px-5 py-4 text-lg font-medium"
                 >
                   Book a Workflow Audit <FiArrowRight size={18} />
-                </Link>
+                </button>
               </div>
             </div>
           </div>

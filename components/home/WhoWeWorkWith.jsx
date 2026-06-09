@@ -103,7 +103,7 @@ const services = [
   },
 ];
 
-const WhoWeWorkWith = () => {
+const WhoWeWorkWith = ({ openModal }) => {
   return (
     <section
       id="who-we-work-with"
@@ -191,12 +191,13 @@ const WhoWeWorkWith = () => {
           right direction.
         </p>
 
-        <Link
-          href={"/contact-us"}
+        <button
+          type="button"
+          onClick={openModal}
           className="red-bg hover:bg-[#000] transition-all duration-300 text-white rounded-[10px] w-full md:w-[275px] h-[56px] flex items-center justify-center text-lg font-medium"
         >
           See If You Qualify
-        </Link>
+        </button>
       </div>
     </section>
   );

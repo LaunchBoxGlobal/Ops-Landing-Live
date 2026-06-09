@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import HeroAnimation from "./HeroAnimation";
 
-const Hero = () => {
+const Hero = ({ openModal }) => {
   return (
     <section
       aria-labelledby="hero-heading"
@@ -24,21 +24,22 @@ const Hero = () => {
         </h2>
 
         <div className="flex items-center justify-center gap-3 lg:gap-5 w-full">
-          <Link
-            href="/contact-us"
+          <button
+            type="button"
+            onClick={openModal}
             aria-label="Book a Workflow Audit"
             className="red-btn"
           >
             Book a Workflow Audit
-          </Link>
+          </button>
 
-          <Link
-            href="/contact-us"
+          <a
+            href="#how-it-works"
             aria-label="See How It Works"
             className="white-btn"
           >
             See How It Works
-          </Link>
+          </a>
         </div>
       </section>
 

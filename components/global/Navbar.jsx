@@ -8,7 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({ openModal }) => {
   const [openSidebar, setOpenSidebar] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [industriesDropdown, setIndustriesDropdown] = useState(false);
@@ -92,20 +92,20 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden w-auto lglg:inline-flex items-center justify-end gap-1 bg-[#fff] pr-1 pl-2 rounded-[17px] border border-[#CECEEA] h-[57px] 2xl:h-[62px] py-1">
-        <Link
-          href="https://www.launchboxglobal.com/contact-us"
-          target="_blank"
+        <button
+          type="button"
+          onClick={openModal}
           className="bg-white px-3 h-full rounded-[11px] whitespace-nowrap text-black transition-all duration-300 flex items-center justify-center font-medium"
         >
           Get in Touch
-        </Link>
-        <Link
-          href="https://www.launchboxglobal.com/contact-us"
-          target="_blank"
+        </button>
+        <button
+          type="button"
+          onClick={openModal}
           className="red-bg px-3 h-full rounded-[11px] whitespace-nowrap text-white hover:bg-black transition-all duration-300 flex items-center justify-center font-medium"
         >
           Book a Workflow Audit
-        </Link>
+        </button>
       </div>
 
       <button

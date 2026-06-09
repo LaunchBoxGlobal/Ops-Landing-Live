@@ -4,7 +4,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import Link from "next/link";
 import { PROCESS_STEPS } from "@/constants/home/home-process";
 
-const Process = () => {
+const Process = ({ openModal }) => {
   return (
     <section
       id="how-it-works"
@@ -37,9 +37,9 @@ const Process = () => {
             return <ProcessCard process={pr} key={pr?.title} index={i + 1} />;
           })}
 
-          <Link
-            href={"https://www.launchboxglobal.com/contact-us"}
-            target="_blank"
+          <button
+            type="button"
+            onClick={openModal}
             className="w-full min-h-[237px] flex flex-col items-start justify-between rounded-[24px] p-5 bg-[#f40e00] transition-all duration-300 group"
           >
             <span className="text-[24px] leading-[1.3] font-bold text-white transition-all duration-300">
@@ -49,7 +49,7 @@ const Process = () => {
             <div className="w-[46px] h-[46px] rounded-full flex items-center justify-center border-2 border-white transition-all duration-300">
               <GoArrowUpRight className="text-white transition-all duration-300 text-2xl" />
             </div>
-          </Link>
+          </button>
         </div>
       </div>
     </section>

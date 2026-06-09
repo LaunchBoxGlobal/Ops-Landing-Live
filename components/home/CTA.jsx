@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const CTA = () => {
+const CTA = ({ openModal }) => {
   return (
     <section className="w-full bg-[#F9F9F9] text-center flex flex-col items-center py-16 lg:py-24 padding-x">
       <span className="text-[#fb1d10] uppercase tracking-wider font-medium text-[14px] md:text-[24px] lg:text-[32px] mb-4 block">
@@ -22,21 +22,21 @@ const CTA = () => {
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mb-6">
-        <Link
-          href={"https://www.launchboxglobal.com/contact-us"}
-          target="_blank"
+        <button
+          type="button"
+          onClick={openModal}
           className="w-full sm:w-auto h-[60px] px-8 bg-[#fb1d10] hover:bg-[#000] text-white font-bold text-[17px] rounded-xl flex items-center justify-center transition-colors duration-200"
         >
           Book a Workflow Audit
-        </Link>
-        <Link
-          href={"https://www.launchboxglobal.com/contact-us"}
-          target="_blank"
+        </button>
+        <button
+          type="button"
+          onClick={openModal}
           className="w-full sm:w-auto h-[60px] px-8 bg-transparent border-2 border-[#fb1d10] hover:bg-[#fb1d10] text-[#fb1d10] hover:text-white font-bold text-[17px] rounded-xl flex items-center justify-center transition-colors duration-200"
         >
           <Mail className="w-[20px] h-[20px] mr-2.5" strokeWidth={2.5} />
           Get in Touch
-        </Link>
+        </button>
       </div>
 
       <p className="text-[#333] text-[17px] md:text-[19px] font-medium leading-[1.6]">

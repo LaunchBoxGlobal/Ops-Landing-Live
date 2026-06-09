@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiLink2 } from "react-icons/fi";
 
-export default function WhatWeDo() {
+export default function WhatWeDo({ openModal }) {
   return (
     <section className="bg-[#fff] padding-x py-24 selection:bg-red-100 selection:text-red-900 overflow-hidden">
       {/* Header Section */}
@@ -111,13 +111,14 @@ export default function WhatWeDo() {
       </div>
 
       <div className="w-full flex justify-center mt-8">
-        <Link
-          href="/contact-us"
+        <button
+          type="button"
+          onClick={openModal}
           aria-label="Book a Workflow Audit"
           className="red-bg text-white hover:bg-black transition-all duration-300 rounded-[14px] w-auto px-5 lg:px-0 lg:w-[249px] h-[64px] text-sm md:text-lg font-semibold inline-flex items-center justify-center"
         >
           Book a Workflow Audit
-        </Link>
+        </button>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const CustomSolutions = () => {
+const CustomSolutions = ({ openModal }) => {
   return (
     <section className="bg-[#fff] padding-x py-24 selection:bg-red-100 selection:text-red-900 overflow-hidden">
       {/* Header Section */}
@@ -127,13 +127,13 @@ const CustomSolutions = () => {
             outgrown your current tools and nothing off the shelf quite fits,
             it's worth a <span className="text-[#fb1d10]">conversation.</span>
           </p>
-          <Link
-            href={"https://www.launchboxglobal.com/contact-us"}
-            target="_blank"
+          <button
+            type="button"
+            onClick={openModal}
             className="bg-[#fb1d10] hover:bg-[#000] text-white font-medium py-4 px-8 rounded-lg shadow-sm transition-colors duration-300"
           >
             Book a Workflow Audit
-          </Link>
+          </button>
         </div>
       </div>
     </section>

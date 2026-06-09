@@ -22,9 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`overflow-x-hidden ${outfit.variable}`}>
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
