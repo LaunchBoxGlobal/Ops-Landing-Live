@@ -167,22 +167,39 @@ export default function WorkflowAuditForm({
     }
   };
 
-  // const handleFormSubmit = (values) => {
-  //   setSubmissionData(values);
-  //   setIsSubmitted(true);
-  //   // Simulating API persistence of the submitted workflow audit detailed parameters
-  //   console.log("Successfully recorded audit booking details:", values);
-  // };
-
   const handleFormSubmit = async (values, { setSubmitting }) => {
     try {
+      const phoneNumber = parsePhoneNumberFromString(values.phoneNumber);
+
+      const formattedPhoneNumber = phoneNumber
+        ? phoneNumber.formatInternational()
+        : values.phoneNumber;
+
+      const payload = {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+        phoneNumber: formattedPhoneNumber,
+        companyName: values.companyName,
+        companySize: values.companySize,
+        tools: values.tools,
+        problems: values.problems,
+        solutionType: values.solutionType,
+        timeline: values.timeline,
+        budget: values.budget,
+        notes: values.notes,
+      };
+
+      // return;
+
       setIsLoading(true);
+
       const response = await fetch("/api/workflow-audit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
@@ -881,10 +898,7 @@ export default function WorkflowAuditForm({
                               type="button"
                               id="next-step-btn"
                               disabled={isLoading}
-                              onClick={() => {
-                                validateStepAndGoNext(formik);
-                                console.log("CLICKED");
-                              }}
+                              onClick={() => validateStepAndGoNext(formik)}
                               className="w-full bg-[#FAFAFA] border border-slate-300 hover:bg-slate-50 hover:border-slate-400 text-slate-800 font-bold px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl transition-all text-xs sm:text-sm flex items-center justify-center gap-1.5 cursor-pointer select-none disabled:cursor-not-allowed disabled:opacity-70"
                             >
                               {step < 3 ? (
